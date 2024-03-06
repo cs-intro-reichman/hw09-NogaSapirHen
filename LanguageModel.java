@@ -72,7 +72,7 @@ public class LanguageModel {
         double newP = 0;
         double prevCP = 0;
         while (temp != null ) {
-             newP = (double) len*(temp.cp.count)/100;
+             newP = (double) (temp.cp.count)/len;
              temp.cp.p = newP;
              temp.cp.cp = newP + prevCP;
              prevCP = newP;
