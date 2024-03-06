@@ -75,7 +75,7 @@ public class LanguageModel {
              newP = (double) (temp.cp.count)/len;
              temp.cp.p = newP;
              temp.cp.cp = newP + prevCP;
-             prevCP = newP;
+             prevCP = temp.cp.cp;
              temp = temp.next;
         }
        
