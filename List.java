@@ -60,7 +60,7 @@ public class List {
         Node current = this.first;
        while (current != null)
         {
-            str.append(current.toString());
+            str.append(current.toString() + " ");
             current = current.next;
         }
         str.append(")");
