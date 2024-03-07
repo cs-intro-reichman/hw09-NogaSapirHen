@@ -117,7 +117,7 @@ public class LanguageModel {
             generatedText.append(chr);
             window = window.substring(1) + chr;
         }
-        generatedText.deleteCharAt(generatedText.length());
+        generatedText.deleteCharAt(generatedText.length()-1);
         return generatedText.toString();
 	}
 
