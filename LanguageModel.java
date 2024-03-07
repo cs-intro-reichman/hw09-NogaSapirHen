@@ -52,8 +52,6 @@ public class LanguageModel {
             }
             probs.update(c);
             window = window.substring(1) + c;
-            if (window.compareTo("c") == 0)
-            break;
         }
             for (List probs : this.CharDataMap.values()) {
                 calculateProbabilities(probs);
@@ -121,9 +119,12 @@ public class LanguageModel {
             }
             char chr = getRandomChar(probs);
             generatedText.append(chr);
+            if (window.length() == 1)
+            {
+                return generatedText.toString();
+            }
             window = window.substring(1) + chr;
-            if (window.charAt(0) == chr && window.length() == 1)
-            return generatedText.toString();
+           
         }
         return generatedText.toString();
 	}
