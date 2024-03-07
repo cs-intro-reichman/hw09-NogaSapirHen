@@ -52,6 +52,8 @@ public class LanguageModel {
             }
             probs.update(c);
             window = window.substring(1) + c;
+            if (window.compareTo("c") == 0)
+            break;
         }
             for (List probs : this.CharDataMap.values()) {
                 calculateProbabilities(probs);

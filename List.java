@@ -56,15 +56,15 @@ public class List {
     /** GIVE Textual representation of this list. */
     public String toString() {
         // Your code goes here
-        StringBuilder str = new StringBuilder();
+        StringBuilder str = new StringBuilder("(");
         Node current = this.first;
        while (current != null)
         {
             str.append(current.toString());
             current = current.next;
         }
-        String answer = str.toString();
-        return answer;
+        str.append(")");
+        return str.toString();
     }
 
     /** Returns the index of the first CharData object in this list
