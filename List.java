@@ -58,14 +58,12 @@ public class List {
         // Your code goes here
         StringBuilder str = new StringBuilder("(");
         Node current = this.first;
-        int count =0;
        while (current != null)
         {
             str.append(current.toString() + " ");
-            count ++;
             current = current.next;
         }
-        str.deleteCharAt(count);
+        str.deleteCharAt(str.length());
         str.append(")");
         return str.toString();
     }
