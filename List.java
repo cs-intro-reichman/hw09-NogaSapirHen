@@ -63,7 +63,7 @@ public class List {
             str.append(current.toString() + " ");
             current = current.next;
         }
-        str.deleteCharAt(str.length());
+        str.deleteCharAt(str.length()-1);
         str.append(")");
         return str.toString();
     }

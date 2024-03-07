@@ -122,7 +122,7 @@ public class LanguageModel {
             char chr = getRandomChar(probs);
             generatedText.append(chr);
             window = window.substring(1) + chr;
-            if (window.charAt(0) == chr && window.length() == 0)
+            if (window.charAt(0) == chr && window.length() == 1)
             return generatedText.toString();
         }
         return generatedText.toString();
